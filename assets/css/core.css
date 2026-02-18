@@ -70,6 +70,7 @@ html {
   scroll-snap-stop: always;
   scroll-snap-type: y;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -87,6 +88,7 @@ body {
   background: linear-gradient(30deg, #1b0f25 0%, #080613 51%, #06050a 85%);
   background-color: #03030a;
   overflow: hidden;
+  scrollbar-width: none;
 }
 
 [tabindex="-1"]:focus {
