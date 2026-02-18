@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Inês Santos - Portfolio">
+    <meta name="author" content="Inês Santos | Original theme by Devcrud">
+    <title>Inês Santos | Portfolio</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="./assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JohnDoe main styles -->
+	<link rel="stylesheet" href="./assets/css/core.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">   
+    <div class="snapping-scroll-container">
+        <header class="header">
+            <canvas id="header-background" width="1920" height="1080"></canvas>
+            <video id="laptop-video" src="./assets/videos/Laptop.mp4" controls="true" style="z-index: -1; width:0%; height: 0%"></video>
+            <video id="controller-video" src="./assets/videos/Controller.mp4" controls="true" style="z-index: -1; width:0%; height: 0%"></video>
+            <video id="cube-video" src="./assets/videos/Cube.mp4" controls="true" style="z-index: -1; width:0%; height: 0%"></video>
+
+            <div class="container">
+                <ul class="social-icons pt-3">
+                <li class="social-item"><a class="social-link text-light" target="_blank" href="https://github.com/inessantos3"><i class="ti-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light"  target="_blank" href="https://www.linkedin.com/in/ines-santos-dev"><i class="ti-linkedin" aria-hidden="true"></i></a></li> 
+                </ul>  
+                <div class="header-content">
+                    <h4 class="header-subtitle" >Welcome, I'm</h4> 
+                    <h1 class="header-title">Inês Santos</h1>
+                    <h6 class="header-mono" >Software & Game Developer | 3D Artist</h6>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark-semitransparent-gradient" data-spy="affix" data-offset-top="200">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <div class="brand-img" id="brand-image">
+                        <img src="./assets/imgs/console.png" alt="" id="controller-image">
+                        <p id="press-key-text">Press any key to continue</p>
+                    </div>
+                    <li class="brand-txt">
+                        <h5 class="brand-title">Inês Santos</h5>
+                        <div class="brand-subtitle">Software & Game Developer | 3D Artist</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#portfolio-riverrunners" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loading-screen">
+        <div class="centered-loading-screen-div">
+            <div class="divided-in-thirds" style="left:0%;">
+                <div class="moving-loading-circle"></div>
+            </div>
+            <div class="divided-in-thirds" style="left:33.3%;">
+                <div class="moving-loading-circle" style="animation-delay: 0.1s;"></div>
+            </div>
+            <div class="divided-in-thirds" style="left:66.6%;">
+                <div class="moving-loading-circle"style="animation-delay: 0.2s;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Read More container-->
+    <div id="read-more-header">
+        <img id="read-more-header-image">
+    </div>
+    <div id="read-more-textbox">
+        <div class="video-close" onClick="closeReadMore()"><img src="./assets/imgs/close.png" style="width: 100%;" alt="X"></i></div>
+    </div>
+
+
+    <div id="video-player-background">
+        <div class="video-player-container">
+            <video id="video-player" height="100%" style="display: block; margin-left: auto; margin-right: auto; max-width: 100%;"
+           src="./assets/videos/RiverRunnersTrailer.mp4" type="video/mp4" controls muted>
+              Your browser does not support the video tag.
+            </video> 
+
+            <div class="video-description-box">
+                <h3 id="video-description"></h3>
+            </div>
+        </div>
+        <div class="video-close"><img src="./assets/imgs/close.png" style="width: 100%;" alt="X"></i></div>
+        
+    </div>
+    <div style="width: 75px; height: 75px; position: fixed; bottom: 15px; right: 15px; z-index: 3100;">
+        <div id="video-show">
+            <img src="./assets/imgs/play-icon.png" alt="Play" style="width: 40%; margin-left: 35%; margin-right: 25%; margin-top: 30%; margin-bottom: 30%;"> 
+        </div>
+        <div id="video-name"></div>
+    </div>
+    
+    <div class="container-fluid" style="background: linear-gradient(30deg, #150e1c 0%, #110f1e 51%, #0f0c1b 85%);">
+        <div class="background-pattern"></div> 
+  
+        <div class="snapping-scroll-container">
+
+            <!--About Section-->
+            <section class="section" id="about">
+                <span style="position: relative; left: 100vw; right: -15px;">
+                    <img src="./assets/imgs/octopus.png" alt="" class="blob-image-right">
+                </span>
+                
+                <div class="container vertical-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h2><span class="text-danger">About </span> me</h2>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <P class="subtitle resizable-subtitle">
+                                Games have been an important part of my life since I was a child, and so has been making them. Started with point-and-click adventures in PowerPoint, before eventually moving on to messing with game assets and finally learning to make my own. 
+                            </P>
+                            <P class="subtitle resizable-subtitle">
+                                Today, I'm a creative game programmer with experience in 3D visuals, and an interest in bringing all sorts of fictional worlds to life.
+                            </P>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="snapping-scroll-container">
+
+            <!--Resume Section-->
+            <section class="section" id="timeline">
+                
+                <div class="container" style="width: 100%; height: 100%;" >
+                    <div style="display: grid; width: 100%; height: 100%; grid-template-columns: 42% 5% 6% 5% 42%; grid-template-rows: repeat(8, 12.5%)">
+                        <div class="timeline-text-container" style="grid-column: 1; grid-row: 2 / span 2;">
+                            <div class="timeline-text-box" style="right: 0%; text-align: end;">
+                                    <h4 class="timeline-subtitle"><span class="text-danger" style="opacity: 100%;">2019 </span> | Self-learning</h4>
+                                    <h3 class="timeline-header">Started using Blender</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-text-container" style="grid-column: 5; grid-row: 3 / span 3;">
+                            <div class="timeline-text-box" style="left: 0%; text-align: start;">
+                                    <h4 class="timeline-subtitle"><span class="text-danger" style="opacity: 100%;">2020 - 2023 </span> | University of Aveiro</h4>
+                                    <h3 class="timeline-header">Bachelor's in Computer and Informatics Engineering</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-text-container" style="grid-column: 1; grid-row: 5 / span 3;">
+                            <div class="timeline-text-box" style="right: 0%; text-align: end;">
+                                    <h4 class="timeline-subtitle"><span class="text-danger" style="opacity: 100%;">2023 - 2025 </span> | University of Aveiro</h4>
+                                    <h3 class="timeline-header">Master's in Digital Game Development</h3>
+                                    <p class="timeline-extra">Included a semester of Erasmus+ mobility at <br> University North, Croatia</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Arrow -->
+                         <div class="skill-tree-vertical-line gradient-mask-B" style="grid-column: 3; grid-row: 1; top: 1px;"></div>
+                         <div class="skill-tree-corner-TL" style="grid-column: 3; grid-row: 2;"></div>
+                         <div class="skill-tree-corner-BR" style="grid-column: 2; grid-row: 2;"></div>
+                         <div class="skill-tree-corner-TR" style="grid-column: 2; grid-row: 3;"></div>
+                         
+                         <div class="skill-tree-horizontal-line" style="grid-column: 3; grid-row: 3;"></div>
+                         <div class="skill-tree-corner-BL" style="grid-column: 4; grid-row: 3;"></div>
+                         <div class="skill-tree-vertical-line" style="grid-column: 4; grid-row: 4;"></div>
+                         <div class="skill-tree-corner-TL" style="grid-column: 4; grid-row: 5;"></div>
+
+                         <div class="skill-tree-horizontal-line" style="grid-column: 3; grid-row: 5;"></div>
+                         <div class="skill-tree-corner-BR" style="grid-column: 2; grid-row: 5;"></div>
+                         <div class="skill-tree-vertical-line" style="grid-column: 2; grid-row: 6;"></div>
+                         <div class="skill-tree-corner-TR" style="grid-column: 2; grid-row: 7;"></div>
+                         <div class="skill-tree-corner-BL" style="grid-column: 3; grid-row: 7;"></div>
+                         <div class="skill-tree-vertical-line" style="grid-column: 3; grid-row: 8;"></div>
+
+                         <div style="position: relative; width: 100%; height: 100%; grid-column: 3; grid-row: 8; display: flex; justify-content: center;">
+                            <div style="position: absolute; top: 100%; width: 100%; height: 100%; display: flex; justify-content: center;">
+                                <div class="skill-tree-line-end-T" style="position: absolute;"></div>
+                                <svg style="width: 50%; height: 100%" fill="#a788e6" width="800px" height="800px" viewBox="0 0 24 24">
+                                    <path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"/>
+                                </svg>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="snapping-scroll-container">
+
+            <!--Skills Section-->
+            <section class="section" id="skills" style="position: relative;">
+                <div style="height: 5vh;"></div>
+                
+                <div style="position: absolute; width: 80%; bottom: 1rem; top: 5rem; left: 10%;">
+                    
+                    <div style="position: absolute; top: 90%; width: 100%; height: 5%; z-index: 300;">
+                        <div class="horizontal-scroll-button" style="left:0%;" onpointerdown="scrollHorizontalElementByPercent('skill-tree-scrollable', -20, true);">
+                            <svg style="height: 100%; width: 100%; position:absolute; left: 0%;" fill="#a788e6" height="256px" width="256px" viewBox="-15.35 -15.35 542.50 542.50" stroke="#a788e6" stroke-width="23.031045"><path d="M271.067,255.84l237.76-237.76c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0L248.453,248.373 c-4.16,4.16-4.16,10.88,0,15.04l245.333,245.333c4.267,4.053,10.987,3.947,15.04-0.213c3.947-4.16,3.947-10.667,0-14.827 L271.067,255.84z"></path> <path d="M25.733,255.84l237.76-237.76c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0L3.12,248.267 c-4.16,4.16-4.16,10.88,0,15.04L248.453,508.64c4.267,4.053,10.987,3.947,15.04-0.213c3.947-4.16,3.947-10.667,0-14.827 L25.733,255.84z"></path></svg>
+                        </div> 
+                        <div class="horizontal-scroll-button" style="right: 0%;" onpointerdown="scrollHorizontalElementByPercent('skill-tree-scrollable', 20, true);">
+                            <svg style="height: 100%; width: 100%; position:absolute; right: 0%;" fill="#a788e6" height="256px" width="256px" viewBox="-15.35 -15.35 542.50 542.50" stroke="#a788e6" stroke-width="23.031045" transform="matrix(-1, 0, 0, 1, 0, 0)"><path d="M271.067,255.84l237.76-237.76c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0L248.453,248.373 c-4.16,4.16-4.16,10.88,0,15.04l245.333,245.333c4.267,4.053,10.987,3.947,15.04-0.213c3.947-4.16,3.947-10.667,0-14.827 L271.067,255.84z"></path> <path d="M25.733,255.84l237.76-237.76c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0L3.12,248.267 c-4.16,4.16-4.16,10.88,0,15.04L248.453,508.64c4.267,4.053,10.987,3.947,15.04-0.213c3.947-4.16,3.947-10.667,0-14.827 L25.733,255.84z"></path></svg>
+                        </div>
+                    </div>
+                    
+                    <div style = "width: 100%; height: 100%; display: flex; justify-content: center;">
+                        <div id="my-skills-title">
+                            <div style="width: fit-content; margin: auto; max-height: 5vh;">
+                                <h2 class="resized-title disable-select" style="position: relative; z-index: 10;">My <span class="text-danger">Skills</span></h2>
+                            </div>
+                        </div>  
+                        <div class="scrollable-horizontal" id="skill-tree-scrollable" style="height: 90%; overflow-y: clip; scrollbar-width: 20px; margin:auto; position: absolute;">                       
+                            <div style="min-width: 100%; margin: auto; height: 100%; position: absolute; display: flex; justify-content: center;">
+                                <div style=" position: relative; height: 100%; aspect-ratio: 16/9; background-color: rgba(127, 255, 212, 0); display: grid; grid-template-columns: repeat(17, 5.5%); grid-template-rows: repeat(9, 11%); padding-left: 6.5%; padding-right: 0%; margin-top: 15px; margin-bottom: 20px;">
+                                    
+                                    <!--Languages-->
+                                    <div class="skill-tree-cell" style="grid-column: 1; grid-row: 2;" onpointerenter="setElementOpacity('skill-tree-language-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/pt.png" alt="PT">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Portuguese
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        Native
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 1; grid-row: 3;" onpointerenter="setElementOpacity('skill-tree-language-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/gb.png" alt="EN">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        English
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        C1 - Proficient User
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 2; grid-row: 2;" onpointerenter="setElementOpacity('skill-tree-language-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/es.png" alt="PT">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Spanish
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        A1 - Basic Communication
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Soft Skills-->
+                                    <div class="skill-tree-cell" style="grid-column: 16; grid-row: 3;" onpointerenter="setElementOpacity('skill-tree-softskills-box', 1, ['skill-tree-language-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/academic.png" alt="PT">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Academic Writing
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 17; grid-row: 3;" onpointerenter="setElementOpacity('skill-tree-softskills-box', 1, ['skill-tree-language-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/professional.png" alt="PT">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Professional Writing
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 17; grid-row: 2;" onpointerenter="setElementOpacity('skill-tree-softskills-box', 1, ['skill-tree-language-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/teamwork.png" alt="PT">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Teamwork
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text" style="max-width: 10rem;">
+                                                        Multiple team projects with varied team composition and size 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Program-->
+                                    <div class="skill-tree-cell" style="grid-column: 1; grid-row: 8;" onpointerenter="setElementOpacity('skill-tree-programming-box', 1, ['skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/java.png" alt="Java">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Java
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 1; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-programming-box', 1, ['skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/python.png" alt="Python">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Python
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 1; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-programming-box', 1, ['skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/cpp.png" alt="C++">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        C++
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 1; grid-row: 5;" onpointerenter="setElementOpacity('skill-tree-programming-box', 1, ['skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/csharp.png" alt="C#">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        C#
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Mobile-->
+                                    <div class="skill-tree-cell" style="grid-column: 4; grid-row: 8;" onpointerenter="setElementOpacity('skill-tree-mobile-box', 1, ['skill-tree-programming-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-connector">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 3; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-mobile-box', 1, ['skill-tree-programming-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/androidstudio.png" alt="Android Studio">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Android Studio
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 3; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-mobile-box', 1, ['skill-tree-programming-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/kotlin.png" alt="Kotlin">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Kotlin
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 3; grid-row: 5;" onpointerenter="setElementOpacity('skill-tree-mobile-box', 1, ['skill-tree-programming-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/jetpackcompose.png" alt="Jetpack Compose">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Jetpack Compose
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 4; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-mobile-box', 1, ['skill-tree-programming-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/flutter.png" alt="Flutter">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Flutter
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 4; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-mobile-box', 1, ['skill-tree-programming-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/dart.png" alt="Dart">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Dart
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Web Development-->
+                            
+                                    <div class="skill-tree-cell" style="grid-column: 6; grid-row: 8;" onpointerenter="setElementOpacity('skill-tree-web-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/html5.png" alt="HTML5">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        HTML5
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 6; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-web-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/css.png" alt="CSS">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        CSS
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 6; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-web-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/javascript.png" alt="JavaScript">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        JavaScript
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 6; grid-row: 5;" onpointerenter="setElementOpacity('skill-tree-web-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/sqlserver.png" alt="SQL">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        SQL Server
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        Database Design & Management
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Game Dev-->
+                                    <div class="skill-tree-cell" style="grid-column: 10; grid-row: 8;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-connector">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 10; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/unreal.png" alt="Unreal Engine 5">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Unreal Engine 5
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 10; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/blueprint.png" alt="Blueprints">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Blueprints
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        UE5 Visual Scripting
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 8; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/unity.png" alt="Unity">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Unity
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 8; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/vr.png" alt="XR">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        XR Interaction Toolkit
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        Virtual Reality Applications
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 12; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/godot.png" alt="Godot">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Godot
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 12; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/gdscript.png" alt="GDScript">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        GDScript
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Digital design-->
+                                    <div class="skill-tree-cell" style="grid-column: 16; grid-row: 8;" onpointerenter="setElementOpacity('skill-tree-design-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-connector">
+                                            
+                                        </div>
+                                    </div>
+
+                                    <!--2D visuals-->
+                                    <div class="skill-tree-cell" style="grid-column: 16; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-design-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/photoshop.png" alt="Photoshop">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Adobe Photoshop
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        Image Editing & Graphic Design
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 16; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-design-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/krita.png" alt="Krita">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Krita
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--3D visuals-->
+                                    <div class="skill-tree-cell" style="grid-column: 17; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-design-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/blender.png" alt="Blender">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Blender
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text" style="max-width: 10rem;">
+                                                        3D Modelling, Rigging, Animation & More
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-cell" style="grid-column: 17; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-design-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/premiere.png" alt="Premiere">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Adobe Premiere
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 17; grid-row: 5;" onpointerenter="setElementOpacity('skill-tree-design-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/aftereffects.png" alt="After Effects">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Adobe After Effects
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        Motion Graphics & Special Effects
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Extras-->
+                                    <div class="skill-tree-cell" style="grid-column: 14; grid-row: 8;" onpointerenter="setElementOpacity('skill-tree-physical-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/autodeskfusion.png" alt="Autodesk Fusion">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Autodesk Fusion
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        CAD Modelling
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 14; grid-row: 7;" onpointerenter="setElementOpacity('skill-tree-physical-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/3dprint.png" alt="Autodesk Fusion">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        3D Printing
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-tree-cell" style="grid-column: 14; grid-row: 6;" onpointerenter="setElementOpacity('skill-tree-physical-box', 1, ['skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-design-box', 'skill-tree-language-box']);">
+                                        <div class="skill-tree-node">
+                                            <img class="skill-tree-icon" src="assets/imgs/skill_icons/arduino.png" alt="Arduino">
+                                            <div class="skill-tree-element-tooltip-container">
+                                                <div class="skill-tree-element-tooltip">
+                                                    <p class="skill-tree-element-tooltip-title">
+                                                        Arduino
+                                                    </p>
+                                                    <hr style="margin-top: 6px; margin-bottom: 6px;">
+                                                    <p class="skill-tree-element-tooltip-text">
+                                                        Setup & Programming
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Lines Bottom-->
+                                    <div class="skill-tree-horizontal-line" style="grid-column: 2/ span 14; grid-row: 9;"></div>
+                                    <div class="skill-tree-corner-TR" style="grid-column: 1; grid-row: 9;"></div>
+                                    <div class="skill-tree-corner-TL" style="grid-column: 16; grid-row: 9;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 1; grid-row: 6 /span 3;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 1; grid-row: 5;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 3; grid-row: 6 /span 2;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 3; grid-row: 5;"></div>
+                                    <div class="skill-tree-corner-TR" style="grid-column: 3; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 4; grid-row: 7 / span 2;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 4; grid-row: 6;"></div>
+                                    <div class="skill-tree-line-end-T" style="grid-column: 4; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-line-end-L" style="grid-column: 4; grid-row: 8;"></div>
+                                    <div class="skill-tree-line-end-T" style="grid-column: 4; grid-row: 9;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 4; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 6; grid-row: 6 /span 3;"></div>
+                                    <div class="skill-tree-line-end-T" style="grid-column: 6; grid-row: 9;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 6; grid-row: 5;"></div>
+
+                                    <div class="skill-tree-line-end-T" style="grid-column: 10; grid-row: 9;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 10; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 16; grid-row: 7 / span 2;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 16; grid-row: 6;"></div>
+            
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 17; grid-row: 6 /span 2;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 17; grid-row: 5;"></div>
+                                    <div class="skill-tree-corner-TL" style="grid-column: 17; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-line-end-R" style="grid-column: 16; grid-row: 8;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 16; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 12; grid-row: 7;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 12; grid-row: 6;"></div>
+                                    <div class="skill-tree-corner-TL" style="grid-column: 12; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 10; grid-row: 7;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 10; grid-row: 6;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 8; grid-row: 7;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 8; grid-row: 6;"></div>
+                                    <div class="skill-tree-corner-TR" style="grid-column: 8; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-horizontal-line" style="grid-column: 9 / span 3; grid-row: 8;"></div>
+                                    <div class="skill-tree-line-end-T" style="grid-column: 10; grid-row: 8;"></div>
+
+                                    <div class="skill-tree-vertical-line" style="grid-column: 14; grid-row: 7 /span 2;"></div>
+                                    <div class="skill-tree-line-end-T" style="grid-column: 14; grid-row: 9;"></div>
+                                    <div class="skill-tree-line-end-B" style="grid-column: 14; grid-row: 6;"></div>
+
+
+                                    <!--Lines Top-->
+                                    <div class="skill-tree-line-end-B" style="grid-column: 1; grid-row: 2;"></div>
+                                    <div class="skill-tree-line-end-T" style="grid-column: 1; grid-row: 3;"></div>
+                                    <div class="skill-tree-line-end-L" style="grid-column: 2; grid-row: 2;"></div>
+                                    <div class="skill-tree-line-end-R" style="grid-column: 1; grid-row: 2;"></div>
+
+                                    <div class="skill-tree-line-end-B" style="grid-column: 17; grid-row: 2;"></div>
+                                    <div class="skill-tree-line-end-T" style="grid-column: 17; grid-row: 3;"></div>
+                                    <div class="skill-tree-line-end-L" style="grid-column: 17; grid-row: 3;"></div>
+                                    <div class="skill-tree-line-end-R" style="grid-column: 16; grid-row: 3;"></div>
+
+                                    <!--Groups and Labels-->
+
+                                    <div class="skill-tree-class-box" id="skill-tree-programming-box" style="grid-column: 1; grid-row: 5 / span 4;" onpointerenter="setElementOpacity('skill-tree-programming-box', 1, ['skill-tree-softskills-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Programming Languages</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-class-box" id="skill-tree-mobile-box" style="grid-column: 3 / span 2; grid-row: 5 / span 4;" onpointerenter="setElementOpacity('skill-tree-mobile-box', 1, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Mobile Development</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-class-box" id="skill-tree-web-box" style="grid-column: 6; grid-row: 5 / span 4;" onpointerenter="setElementOpacity('skill-tree-web-box', 1, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Web Development</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-class-box" id="skill-tree-game-dev-box" style="grid-column: 8/ span 5; grid-row: 6 / span 3;" onpointerenter="setElementOpacity('skill-tree-game-dev-box', 1, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-physical-box', 'skill-tree-design-box', 'skill-tree-language-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Game Development</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-class-box" id="skill-tree-physical-box" style="grid-column: 14; grid-row: 6 / span 3;" onpointerenter="setElementOpacity('skill-tree-physical-box', 1, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-design-box', 'skill-tree-language-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Physical Prototyping</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-class-box" id="skill-tree-design-box" style="grid-column: 16 / span 2; grid-row: 5 / span 4;" onpointerenter="setElementOpacity('skill-tree-design-box', 1, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-language-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Digital Design</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-class-box" id="skill-tree-language-box" style="grid-column: 1 / span 2; grid-row: 2 / span 2;" onpointerenter="setElementOpacity('skill-tree-language-box', 1, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Languages</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill-tree-class-box" id="skill-tree-softskills-box" style="grid-column: 16 / span 2; grid-row: 2 / span 2;" onpointerenter="setElementOpacity('skill-tree-softskills-box', 1, ['skill-tree-language-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);" onpointerdown="hideAllSkillTooltips();">
+                                        <div class="skill-tree-class-subtitle-box">
+                                            <p class="skill-tree-text-subtitle">Soft Skills</p>
+                                        </div>
+                                    </div>
+         
+                                    <div style="grid-column: 1 /span 18; grid-row: 1 /span 9; background-color: rgba(0, 0, 0, 0); z-index: 1;" onpointerover="setElementOpacity('skill-tree-language-box', 0, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']);" onpointerdown="setElementOpacity('skill-tree-language-box', 0, ['skill-tree-softskills-box', 'skill-tree-programming-box', 'skill-tree-mobile-box', 'skill-tree-web-box', 'skill-tree-game-dev-box', 'skill-tree-physical-box', 'skill-tree-design-box']); hideAllSkillTooltips()"></div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+        </div>
+
+        <div class="background-separator">
+        </div>
+
+        <div class="snapping-scroll-container">
+
+            <!--River Runners Section-->
+            <section class="section" id="portfolio-riverrunners">
+                
+                <div class="read-more-info" id="read-more-rr">
+                    <div style="display: none; background-image: url('./assets/imgs/riverrunnersheader.png');"></div>
+                    <div class="scrollable-vertical">
+                        <h2><span class="text-danger">River </span> Runners</h2>
+                        <span class="line"></span>
+                        <hr>
+                        <h6 class="title text-base-color"><span class="text-danger">Engine: </span> Godot</h6>
+                        <h6 class="title text-base-color"><span class="text-danger">Team Size: </span> 4 members</h6>
+                        <h6 class="title text-base-color"><span class="text-danger">Development Period: </span> October 2023 - January 2024</h6>
+                        <hr>
+                        <h6 class="title text-base-color">My Contributions:</h6>
+                        <p>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Highly customizable level management system using JSON;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Procedural map generation based on obstacle modules, with a verification system that prevents impossible challenges;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Text-based obstacle modules, for easy variation;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Core gameplay, character abilities and respective interations with the obstacles;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Cutscene system;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Sound design.</li>
+                        </p>
+                    </div>
+                </div>
+
+                <span style="position: relative; right: 100vw; left: -15px;">
+                    <img id="video-show-rr" src="./assets/imgs/river-runners.png" alt="" class="blob-image-left">
+                </span>
+                
+                <div class="container vertical-center">
+                    <div class="card card-right">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h2><span class="text-danger">River </span> Runners</h2>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-base-color"><span class="text-danger">Engine: </span> Godot</h6>
+                            <h6 class="title text-base-color"><span class="text-danger">Roles: </span> Team Lead, Gameplay & Systems Programmer, Sound Designer</h6>
+                            <hr>
+                            <P class="subtitle resizable-subtitle">An upbeat endless runner where you rescue other animals and coordinate their abilities to avoid obstacles in the river. </p>
+                            <p class="subtitle resizable-subtitle"> Fun for all ages, including a story mode with adjustable difficulty and an endless mode for those who want to challenge themselves. <a class="read-more-tag" onClick="onClickReadMore('read-more-rr')"> Read More</a></P>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mt-2"> 
+                                <button class="btn btn-primary rounded"><a href="https://misternizzio.itch.io/riverrunners" target="_blank"><img style="height: 4vh;" src="./assets/imgs/itchio-logo.png" alt="Itch.io"></a></button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            
+            </section>
+        </div>
+
+        
+        <div class="snapping-scroll-container">
+
+            <div class="read-more-info" id="read-more-ftl">
+                    <div style="display: none; background-image: url('./assets/imgs/followthelightheader.png');"></div>
+                    <div class="scrollable-vertical">
+                        <h2><span class="text-danger">Follow </span> The Light</h2>
+                        <span class="line"></span>
+                        <hr>
+                        <h6 class="title text-base-color"><span class="text-danger">Engine: </span> Unreal Engine 5</h6>
+                        <h6 class="title text-base-color"><span class="text-danger">Team Size: </span> 4 members</h6>
+                        <h6 class="title text-base-color"><span class="text-danger">Development Period: </span> March 2024 - July 2024</h6>
+                        <hr>
+                        <h6 class="title text-base-color">My Contributions:</h6>
+                        <p>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Playable character modelling and animation;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Character integration into the engine;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Dynamic music manager;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Sound Design.</li>
+                        </p>
+                    </div>
+                </div>
+
+            <!--Follow The Light Section-->
+            <section class="section" id="portfolio-followthelight">
+                <span style="position: relative; left: 100vw; right: -15px;">
+                    <img id="video-show-ftl" src="./assets/imgs/followthelight.png" alt="" class="blob-image-right">
+                </span>
+                
+                <div class="container vertical-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h2><span class="text-danger">Follow </span> The Light</h2>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-base-color"><span class="text-danger">Engine: </span> Unreal Engine 5</h6>
+                            <h6 class="title text-base-color"><span class="text-danger">Roles: </span> Team Lead, 3D artist, 3D animator, Sound Designer</h6>
+                            <hr>
+                            <P class="subtitle resizable-subtitle">A dreamy underwater adventure about a young protagonist who is faced with a stressful decision. </p>
+                            <p class="subtitle resizable-subtitle">Follow the whale's call, solve puzzles and reach the light at the top of the tower. <a class="read-more-tag" onClick="onClickReadMore('read-more-ftl')">Read More</a></P>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mt-2"> 
+                                <button class="btn btn-primary rounded"><a href="https://saltyfrogs.itch.io/follow-the-light" target="_blank"><img style="height: 4vh;" src="./assets/imgs/itchio-logo.png" alt="Itch.io"></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </section>
+        </div>
+
+        <div class="snapping-scroll-container">
+
+            <div class="read-more-info" id="read-more-bwvr">
+                    <div style="display: none; background-image: url('./assets/imgs/bewitchheader.png');"></div>
+                    <div class="scrollable-vertical">
+                        <h2><span class="text-danger">BeWitch </span> VR</h2>
+                        <span class="line"></span>
+                        <hr>
+                        <h6 class="title text-base-color"><span class="text-danger">Engine: </span> Unity</h6>
+                        <h6 class="title text-base-color"><span class="text-danger">Team Size: </span> Solo Developer</h6>
+                        <h6 class="title text-base-color"><span class="text-danger">Development Period: </span>July 2025 - September 2025</h6>
+                        <hr>
+                        <h6 class="title text-base-color">Features:</h6>
+                        <p>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Complex concentration-based mixing logic, allowing for free customization of the potion effects;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Interactive environment including ingredient bottles, books and letters;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Uses a locally-hosted large language model (LLM) to generate character decisions;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Character potion requests are generated based on their current state using the LLM;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Characters form opinions based on the potions they receive, using the LLM;</li>
+                        <li class="list-line subtitle resizable-subtitle" style="opacity: 0.8; color: #b8c7d6;">Characters have predefined personalities and relationships, which affect their decisions and allow them to share opinions among themselves.</li>
+                        </p>
+                    </div>
+                </div>
+
+            <!--BeWitch Section-->
+            <section class="section" id="portfolio-bewitchvr">
+                <span style="position: relative; right: 100vw; left: -15px;">
+                    <img id="video-show-rr" src="./assets/imgs/bewitch.png" alt="" class="blob-image-left">
+                </span>
+                
+                <div class="container vertical-center">
+                    <div class="card card-right">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h2><span class="text-danger">BeWitch </span> VR</h2>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-base-color"><span class="text-danger">Engine: </span> Unity 6</h6>
+                            <h6 class="title text-base-color"><span class="text-danger">Roles: </span> Solo Developer</h6>
+                            <hr>
+                            <P class="subtitle resizable-subtitle">A virtual reality game prototype where you receive potion requests from the townfolk and concoct the solutions to their troubles (or cause even greater problems).</p>
+                            <p class="subtitle resizable-subtitle">A large language model is used to generate the people's requests, as well as their reactions to each potion. <a class="read-more-tag" onClick="onClickReadMore('read-more-bwvr')"> Read More</a></P>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mt-2"> 
+                                <button class="btn btn-primary rounded"><a href="https://github.com/inessantos3/BewitchVR-LLM/" target="_blank"><img style="height: 4vh;" src="./assets/imgs/GitHub_Logo.png" alt="GitHub"></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </section>
+        </div>
+
+        <div class="snapping-scroll-container">
+
+            <!--Blender Section-->
+            <section class="section" id="portfolio-blender">
+                <span style="position: relative; left: 100vw; right: -15px;">
+                    <img id="video-show-bwvr" src="./assets/imgs/cat_new.png" alt="" class="blob-image-right">
+                </span>
+                
+                <div class="container vertical-center"  style="z-index: 2;">
+                    <div class="card" >
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h2><span class="text-danger">3D </span> Visuals</h2>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">Blender</h6>
+                            <P class="subtitle resizable-subtitle">Started out as an hobby, using 3D models from the games I played, and gradually learned to customize them until I was making my own assets from scratch.</P>
+                            <P class="subtitle resizable-subtitle">6 years and many projects later, I've gone through the entire character creation pipeline and modeled complete environments, for static and interactive visuals alike.</P>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+        <div class="snapping-scroll-container">
+            
+            <section class="section" id="portfolio-3d">
+                
+                <div class="container vertical-center">
+                
+                    <div class="portefolio-image-display">
+                        <h2 class="mb-5" style="position: absolute; bottom: 100%; margin-bottom: 5px !important; margin-left: 7px;"><span class="text-danger">3D </span> Portfolio</h2>
+                        <div class="mobile-hidden-component">
+                       <div class="image-display-container" style="width: 20%; height: 40%; top: 0%; left: 0%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/phonewpp.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Abstract Wallpaper</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-abstractwallpaper1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-abstractwallpaper1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Abstract Wallpaper</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 25%; height: 35%; top: 0%; left: 20%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/Bedroom.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Animated Bedroom</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-bedroom1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-bedroom1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Animated Bedroom</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A bedroom created for a university project. It was used for a smart house simulation, which was controlled through hand motions captured by a radar sensor.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 30%; height: 60%; top: 0%; left: 45%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/mc_render.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Game Character</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-gamecharacter1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-gamecharacter1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Game Character</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A playable character created for the game Follow The Light, modeled after a team member's concept art. It is game-ready and includes 6 animations.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 25%; height: 25%; top: 0%; left: 75%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/LivingRoom.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Animated Living Room</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-livingroom1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-livingroom1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Living Room</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A living room created for a university project. It was used for a smart house simulation, which was controlled through hand motions captured by a radar sensor.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 20%; height: 30%; top: 40%; left: 0%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/IcedTea.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Pool & Drink</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-icedtea1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-icedtea1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Pool & Drink</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 25%; height: 25%; top: 35%; left: 20%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/octopus_full.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Octopus</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-octopus1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-octopus1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Octopus</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A high-poly sculpt of an octopus using a combination of texture maps and procedural shading.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 25%; height: 20%; top: 25%; left: 75%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/BioBin.jpg" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Smart Recycling Bin</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-biobin1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-biobin1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Smart Recycling Bin</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender + Photoshop</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Smart bin created for an university course and edited into a real-life kitchen.</P>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 25%; height: 30%; top: 45%; left: 75%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/Laptop.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Laptop & Controller</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-laptop1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-laptop1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Laptop & Controller</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 25%; height: 25%; top: 75%; left: 75%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/aquarium.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Aquarium</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-aquarium1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-aquarium1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Aquarium</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Low poly aquarium created for a 3D modelling course. Uses a single texture atlas.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 20%; height: 30%; top: 70%; left: 0%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/cat_full.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Stylized Cat</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-cat1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-cat1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Stylized Cat</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Game-ready cat asset created for the game BeWitchVR. Fur was added for this render only.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 35%; height: 40%; top: 60%; left: 20%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/DivergenceMeter.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Divergence Meter</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-divmeter1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-divmeter1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Divergence Meter</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Divergence meter from the Steins;Gate series.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 20%; height: 40%; top: 60%; left: 55%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/Minimalist.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Minimalist Table</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-minimalist1');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-minimalist1" class="image-display-extrainfo-text-container">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Minimalist Table</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mobile-only-section">
+                            <div class="image-display-container" style="width: 28%; height: 22%; top: 0%; left: 0%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/phonewpp.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Abstract Wallpaper</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-abstractwallpaper2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-abstractwallpaper2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Abstract Wallpaper</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 37%; height: 20%; top: 0%; left: 28%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/LivingRoom.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Animated Living Room</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-livingroom2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-livingroom2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Animated Living Room</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A living room created for a university project. It was used for a smart house simulation, which was controlled through hand motions captured by a radar sensor.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 35%; height: 40%; top: 0%; left: 65%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/mc_render.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Game Character</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-gamecharacter2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-gamecharacter2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Game Character</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A playable character created for the game Follow The Light, modeled after a team member's concept art. It is game-ready and includes 6 animations.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="image-display-container" style="width: 28%; height: 18%; top: 22%; left: 0%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/octopus_full.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Octopus</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-octopus2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-octopus2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Octopus</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A high-poly sculpt of an octopus using a combination of texture maps and procedural shading.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 37%; height: 20%; top: 20%; left: 28%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/IcedTea.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Pool & Drink</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-icedtea2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-icedtea2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Pool & Drink</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="image-display-container" style="width: 25%; height: 25%; top: 40%; left: 0%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/Minimalist.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Minimalist Table</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-minimalist2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-minimalist2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Minimalist Table</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 45%; height: 25%; top: 40%; left: 25%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/DivergenceMeter.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Divergence Meter</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-divmeter2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-divmeter2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Divergence Meter</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Divergence meter from the Steins;Gate series.</P>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 30%; height: 20%; top: 40%; left: 70%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/Laptop.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Laptop & Controller</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-laptop2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-laptop2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Laptop & Controller</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="image-display-container" style="width: 30%; height: 25%; top: 65%; left: 0%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/cat_full.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Stylized Cat</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-cat2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-cat2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Stylized Cat</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Game-ready cat asset created for the game BeWitchVR. Fur was added for this render only.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 40%; height: 25%; top: 65%; left: 30%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/Bedroom.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Animated Bedroom</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-bedroom2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-bedroom2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Animated Bedroom</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">A bedroom created for a university project. It was used for a smart house simulation, which was controlled through hand motions captured by a radar sensor.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 30%; height: 15%; top: 60%; left: 70%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/BioBin.jpg" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Smart Recycling Bin</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-biobin2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-biobin2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Smart Recycling Bin</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender + Photoshop</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Smart bin created for an university course and edited into a real-life kitchen.</P>
+                                            <hr>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-display-container" style="width: 30%; height: 15%; top: 75%; left: 70%;">
+                                <div class="image-display">
+                                    <img src="./assets/imgs/aquarium.png" alt="Alt Text">
+                                    <div class="image-display-title">
+                                        <p>Aquarium</p>
+                                    </div>
+                                    <div class="image-display-close"><img src="./assets/imgs/close.png" style="position: absolute; width: 100%;" alt="X"></i></div>
+                                    <div class="image-display-extrainfo-button disable-select" onpointerdown="event.stopPropagation(); toggleImageDisplayInfo('image-display-aquarium2');">
+                                        <img src="./assets/imgs/arrow-right.png" alt=">" class="image-display-extrainfo-button-icon">
+                                    </div>
+                                    <div id="image-display-aquarium2" class="image-display-extrainfo-text-container" style="max-width: 100%;">
+                                        <div class="image-display-extrainfo-text">
+                                            <h2 class="text-white">Aquarium</h2>
+                                            <span class="line"></span> 
+                                            <hr>
+                                            <h6 class="title text-light"><span class="text-accent-light">Software: </span> Blender</h6>
+                                            <hr>
+                                            <P class="subtitle resizable-subtitle">Low poly aquarium created for a 3D modelling course. Uses a single texture atlas.</P>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="snapping-scroll-container">
+
+            <!--Mobile Section-->
+            <section class="section" id="portfolio-mobile">
+                <span style="position: relative; left: 100vw; right: -15px;">
+                    <img src="./assets/imgs/mobile-dev.png" alt="" class="blob-image-right">
+                </span>
+                
+                <div class="container vertical-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h2><span class="text-danger">Mobile </span> development</h2>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">Android Studio & Flutter</h6>
+                            <P class="subtitle resizable-subtitle">Worked on 3 prototypes, using both the legacy XML-based approach and the modern one with Kotlin and Jetpack Compose.</P>
+
+                            <P class="subtitle resizable-subtitle">Developed a running companion app that enables people to set objectives and track their runs.</P>
+                            
+                        </div>
+                        <div class="card-footer">
+                            <h6 class="title text-base-color"><span class="text-danger">Experience with: </span>Camera, Bluetooth, GPS tracking, Map integration, Movement sensors.</h6>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </section>
+        </div>
+
+        <div class="background-separator"></div>
+
+        <div class="snapping-scroll-container">
+
+            <!--Contact Section-->
+            <section class="section" id="contact">
+
+                <span style="position: relative; right: 100vw; left: -15px; opacity: 0.8;">
+                    <img src="./assets/imgs/page-end-bubbles-L.png" alt="" class="blob-image-left">
+                </span>
+
+                <span style="position: relative; left: 100vw; right: -15px; opacity: 0.8;">
+                    <img src="./assets/imgs/page-end-bubbles-R.png" alt="" class="blob-image-right">
+                </span>
+                
+                <div class="container vertical-center">
+                    
+                    <div class="card card-centre" style="min-height: 30vh;">
+                        <div class="card-header">
+                            <div class="mt-2">
+                                <h2><span class="text-danger">Contact </span> information</h2>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            
+                            <P class="copiable-text" onClick="copyToClipboard('inessmsantos@proton.me')"><span class="text-danger">Email: </span> inessmsantos@proton.me <img src="./assets/imgs/copy.png" alt="" class="copy-to-clipboard"></P>
+                            <hr>
+                            
+                        </div>
+                        <div class="card-footer">
+                            <div class="mt-2"> 
+                                <button class="btn btn-primary rounded"><a href="https://www.linkedin.com/in/ines-santos-dev" target="_blank"><img style="height: 4vh;" src="./assets/imgs/LI-Logo.png" alt="LinkedIn"></a></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+                <div id="copied-info">Copied</div>
+
+            </section>
+            <div style="position: relative; display: flex; justify-content: center;">
+                <div class="page-end" style="width: 100vw;">
+                    <img style="width: 100%;" src="./assets/imgs/page-end.png" alt="">
+                </div>
+                <div style="position: absolute; width: 100vw; height: 100vh; bottom: 0%; pointer-events: none;">
+                    <div class="page-end" style="height: 100vh;">
+                        <img style="height: 100%; position: absolute; left: 0%; opacity: 10%;" src="./assets/imgs/page-end-L.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+
+    <footer class="footer py-3">
+        <div class="container">
+            <p class="small mb-0 text-dark">
+                &copy; <script>document.write(new Date().getFullYear())</script> Original template by <a href="http://devcrud.com" target="_blank"><span class="text-dark" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> 
+            </p>
+        </div>
+    </footer>
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/core.js"></script>
+
+</body>
+</html>
