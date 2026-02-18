@@ -411,7 +411,7 @@ function updateWidthMode(scroll=true) {
 
     if (width_mode == 0){
 
-        document.getElementsByTagName("body")[0].style.overflow = "scroll";
+        document.getElementsByTagName("body")[0].style.overflowY = "scroll";
         isScrollEnabled = false;
 
         var sections = document.getElementsByClassName("mobile-only-section");
@@ -440,7 +440,7 @@ function updateWidthMode(scroll=true) {
     }
     else
     {
-        document.getElementsByTagName("body")[0].style.overflow = "hidden";
+        document.getElementsByTagName("body")[0].style.overflowY = "hidden";
         isScrollEnabled = true;
 
         var sections = document.getElementsByClassName("mobile-only-section");
