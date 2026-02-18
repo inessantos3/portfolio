@@ -52,9 +52,9 @@ var width_mode = 0;
 
 var isVideoActive = false;
 
-var videos = {"#portfolio-riverrunners" : ["./assets/videos/RiverRunnersTrailer.mp4","River Runners - Story Trailer","River Runners - Story Trailer"],
-              "#portfolio-followthelight" : ["./assets/videos/FollowTheLightShort.mp4","Follow The Light - Short Demo","Follow The Light - Short Demo"],
-              "#portfolio-bewitchvr" : ["./assets/videos/BeWitchShort.mp4","BeWitchVR - Short Gameplay Demo","BeWitchVR - Short Demo"],
+var videos = {"#portfolio-riverrunners" : ["https://www.youtube.com/embed/WN4ZUu4RaRQ","River Runners - Story Trailer","River Runners - Story Trailer"],
+              "#portfolio-followthelight" : ["https://www.youtube.com/embed/MpLndVTCAs0","Follow The Light - Short Demo","Follow The Light - Short Demo"],
+              "#portfolio-bewitchvr" : ["https://www.youtube.com/embed/oRlSEZox83I","BeWitchVR - Short Gameplay Demo","BeWitchVR - Short Demo"],
 };
 var current_video = "#portfolio-riverrunners";
 
@@ -481,8 +481,8 @@ function updateWidthMode(scroll=true) {
 function updateVideoVisibility(video="") {
     if(video!=""){current_video = video;}
     if (isVideoActive) {
-        document.getElementById("video-player").pause();
-        document.getElementById("video-player").currentTime = 0;
+       
+        document.getElementById("video-player").src = "";
 
         if(Object.keys(videos).indexOf(current_video) >= 0){
             document.getElementById("video-player").src = videos[current_video][0];
@@ -498,8 +498,8 @@ function updateVideoVisibility(video="") {
     }
     else
     {
-        document.getElementById("video-player").pause();
-        document.getElementById("video-player").currentTime = 0;
+        
+        document.getElementById("video-player").src = "";
         document.getElementById("video-player-background").style.display = "none";
     }
 }

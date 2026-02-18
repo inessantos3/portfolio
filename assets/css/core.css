@@ -11909,14 +11909,17 @@ pre .code {
 
 .video-player-container {
   width: 60%;
-  height:60%;
+  height:80%;
   left: 20%;
   right:20%;
-  top: 15%;
-  bottom: 15%;
+  top: 10%;
+  bottom: 10%;
   position: absolute;
   background-color: #0000;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .video-description-box {
@@ -11927,6 +11930,7 @@ pre .code {
   right:0%;
   top: 100%;
   position: absolute;
+  display: none;
 }
 
 #video-description {
