@@ -835,8 +835,12 @@ function drawFrame(frame, frame_width=1920, frame_height=1080) {
                 y = canvas.height - newHeight;
 
             }
+            try {
+                context.drawImage(frame, x, y, newWidth, newHeight);
+            } catch (error) {
+                
+            }
             
-            context.drawImage(frame, x, y, newWidth, newHeight);
     
     }  
 }
