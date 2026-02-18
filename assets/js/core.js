@@ -37,6 +37,9 @@ var scrollCooldown = 600;
 var isOnCooldown = false;
 var scrollTime = 500;
 
+var touchX = null;
+var touchY = null;
+
 var previous_section = 0;
 var current_section = 0;
 
@@ -111,10 +114,50 @@ $(document).ready(function(){
       else if(event.originalEvent.deltaY < -75  && !event.originalEvent.shiftKey && !isReadMoreActive) {
         scrollToNext(-1);
       }
-
-      
-
     });
+
+    $(document).on('touchstart', function(event) {
+        if(event.touches.length == 1){
+            touchX = event.touches.screenX;
+            touchY = event.touches.screenY;
+        }
+    });
+
+    $(document).on('touchmove', function(event) {
+        if (touchY != null){
+            if(event.touches.length == 1){
+                if (event.changedTouches.screenY - touchY < -75){
+                    scrollToNext(-1);
+                }
+                else if (event.changedTouches.screenY - touchY > 75){
+                    scrollToNext(1);
+                }
+            }
+        }
+        else
+        {
+            if(event.touches.length == 1){
+                touchX = event.touches.screenX;
+                touchY = event.touches.screenY;
+            }
+        }
+    });
+
+    $(document).on('touchend', function(event) {
+        if (touchY != null){
+            if(event.touches.length == 1){
+                if (event.changedTouches.screenY - touchY < -75){
+                    scrollToNext(-1);
+                }
+                else if (event.changedTouches.screenY - touchY > 75){
+                    scrollToNext(1);
+                }
+            }
+        }
+        touchX = null;
+        touchY = null;
+    });
+
 
     $(".video-close").on('click', function(event) {
         isVideoActive = false;
