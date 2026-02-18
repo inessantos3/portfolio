@@ -108,12 +108,27 @@ $(document).ready(function(){
     });
 
     $(document).on('wheel', function(event) {
-      if (event.originalEvent.deltaY > 75 && !event.originalEvent.shiftKey && !isReadMoreActive && isScrollEnabled) {
-        scrollToNext(1);
-      }
-      else if(event.originalEvent.deltaY < -75  && !event.originalEvent.shiftKey && !isReadMoreActive && isScrollEnabled) {
-        scrollToNext(-1);
-      }
+        if (event.originalEvent.deltaY > 75 && !event.originalEvent.shiftKey && !isReadMoreActive && isScrollEnabled) {
+            scrollToNext(1);
+        }
+        else if(event.originalEvent.deltaY < -75  && !event.originalEvent.shiftKey && !isReadMoreActive && isScrollEnabled) {
+            scrollToNext(-1);
+        }
+      
+        if(!isScrollEnabled){
+            if(document.getElementsByTagName("html")[0].scrollTop > window.innerHeight*2)
+            {
+                laptop_source_video.pause();
+                controller_source_video.pause();
+                cube_source_video.pause();
+            }
+            else
+            {
+                if((laptop_source_video.paused || laptop_source_video.ended) && (controller_source_video.paused || cube_source_video.ended) && (cube_source_video.paused|| cube_source_video.ended)){
+                    setTimeout(playRandomBackgroundVideo(), Math.random() * 2000);
+                }
+            }
+        }
     });
 
     $(".video-close").on('click', function(event) {
@@ -304,7 +319,7 @@ $(window).on('popstate', function(event) {
 
 // Press any key to continue
 $(window).on("keydown",function(event) {
-    if(!isOnCooldown && current_section == 0 && (event.which < 112 || event.which > 123)) {
+    if(!isOnCooldown && isScrollEnabled && current_section == 0 && (event.which < 112 || event.which > 123)) {
         scrollToNext();
     }
     if(!isOnCooldown && (event.originalEvent.key == "ArrowDown" || event.originalEvent.key == "ArrowRight")) {
@@ -321,7 +336,7 @@ $(window).on("keydown",function(event) {
     
 });
 $(window).on("pointerdown",function(event) {
-    if(!isOnCooldown && current_section == 0 && event.target.className != "ti-github" && event.target.className != "ti-linkedin") {
+    if(!isOnCooldown && current_section == 0 && isScrollEnabled && event.target.className != "ti-github" && event.target.className != "ti-linkedin") {
         scrollToNext();
     }
 });
