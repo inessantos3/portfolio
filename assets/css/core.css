@@ -69,6 +69,7 @@ html {
   scroll-behavior: smooth;
   scroll-snap-stop: always;
   scroll-snap-type: y;
+  overflow-x: hidden;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {

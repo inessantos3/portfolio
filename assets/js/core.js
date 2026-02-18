@@ -116,7 +116,7 @@ $(document).ready(function(){
       }
     });
 
-    $(document).on('touchstart', function(event) {
+   /* $(document).on('touchstart', function(event) {
         if(event.touches.length == 1){
             touchX = event.touches.screenX;
             touchY = event.touches.screenY;
@@ -157,7 +157,7 @@ $(document).ready(function(){
         touchX = null;
         touchY = null;
     });
-
+*/
 
     $(".video-close").on('click', function(event) {
         isVideoActive = false;
