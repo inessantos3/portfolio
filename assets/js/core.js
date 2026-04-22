@@ -43,8 +43,8 @@ var scrollTime = 500;
 var previous_section = 0;
 var current_section = 0;
 
-var section_identifiers_pc = ["#home", "#about", "#timeline", "#skills", "#portfolio-riverrunners", "#portfolio-followthelight", "#portfolio-bewitchvr", "#portfolio-blender", "#portfolio-3d", "#portfolio-mobile", "#contact"];
-var section_identifiers_mobile = ["#home", "#about", "#timeline", "#skills", "#portfolio-riverrunners", "#portfolio-followthelight", "#portfolio-bewitchvr", "#portfolio-blender", "#portfolio-3d", "#portfolio-mobile", "#contact"];
+var section_identifiers_pc = ["#home", "#about", "#timeline", "#skills", "#portfolio-riverrunners", "#portfolio-followthelight", "#portfolio-bewitchvr", "#portfolio-harvest", "#portfolio-blender", "#portfolio-3d", "#portfolio-mobile", "#contact"];
+var section_identifiers_mobile = ["#home", "#about", "#timeline", "#skills", "#portfolio-riverrunners", "#portfolio-followthelight", "#portfolio-bewitchvr", "#portfolio-harvest", "#portfolio-blender", "#portfolio-3d", "#portfolio-mobile", "#contact"];
 
 var section_identifiers = [section_identifiers_mobile, section_identifiers_pc];
 
@@ -58,6 +58,7 @@ var isVideoActive = false;
 var videos = {"#portfolio-riverrunners" : ["https://www.youtube.com/embed/WN4ZUu4RaRQ","River Runners - Story Trailer","River Runners - Story Trailer"],
               "#portfolio-followthelight" : ["https://www.youtube.com/embed/MpLndVTCAs0","Follow The Light - Short Demo","Follow The Light - Short Demo"],
               "#portfolio-bewitchvr" : ["https://www.youtube.com/embed/oRlSEZox83I","BeWitchVR - Short Gameplay Demo","BeWitchVR - Short Demo"],
+              "#portfolio-harvest" : ["https://www.youtube.com/embed/PINXc7M7J1E","Harvest - Gameplay Demo","Harvest - Gameplay Demo"],
 };
 var current_video = "#portfolio-riverrunners";
 
@@ -451,12 +452,19 @@ function updateWidthMode(scroll=true) {
 
         var images = document.getElementsByClassName("blob-image-right");
         for (i=0; i < images.length; i++){
-            images[i].style.opacity = 0.5;
+            if (images[i].style.opacity < 1)
+            {
+                images[i].style.opacity = 0.5;
+            }
             images[i].style.height = '60%';
         }
         images = document.getElementsByClassName("blob-image-left");
         for (i=0; i < images.length; i++){
-            images[i].style.opacity = 0.5;
+            console.log(images[i].style.opacity.toString())
+            if (images[i].style.opacity < 1)
+            {
+                images[i].style.opacity = 0.5;
+            }
             images[i].style.height = '60%';
         }
 
@@ -478,33 +486,21 @@ function updateWidthMode(scroll=true) {
 
         var images = document.getElementsByClassName("blob-image-right");
         for (i=0; i < images.length; i++){
-            images[i].style.opacity = 0.9;
+            if (images[i].style.opacity < 1)
+            {
+                images[i].style.opacity = 0.9;
+            }
             images[i].style.height = '75%';
         }
         images = document.getElementsByClassName("blob-image-left");
         for (i=0; i < images.length; i++){
-            images[i].style.opacity = 0.9;
+            if (images[i].style.opacity < 1)
+            {
+                images[i].style.opacity = 0.9;
+            }
             images[i].style.height = '75%';
         }
     }
-    /*
-    if (previous_width_mode != width_mode && scroll) {
-        
-        if (Object.keys(parent_sections).indexOf(hash) >= 0) {
-            hash = parent_sections[hash];   
-        }
-        if (section_identifiers[width_mode].indexOf(hash) != current_section) {
-            previous_section = current_section;
-            setIsOnCooldown(true);
-              window.setTimeout(onCooldownEnd, scrollCooldown);
-            }
-            current_section = section_identifiers[width_mode].indexOf(hash);
-            sessionStorage.setItem("current_hash", section_identifiers[width_mode][current_section]);
-            $('html, body').stop();
-            goToHash(hash);
-    
-
-    }*/
 
     if (previous_width_mode != width_mode) {
         //reset image displays
